@@ -19,7 +19,6 @@ def simulation_1() :
     
     if deadlocked:
         print("Deadlock detected!")
-        victim = detector.resolve_deadlock(deadlocked)
-        print(f"Deadlocked resolved by releasing resource {victim}")
+        detector.resolve_deadlock(deadlocked)
     else:
         print("No deadlock detected")

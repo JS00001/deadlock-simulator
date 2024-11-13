@@ -17,10 +17,9 @@ def simulation_3():
     
     # Deadlock State: 1 is waiting for 2, 2 is waiting for 3, 3 is waiting for 4, 4 is waiting for 1
     deadlocked = detector.detect_deadlock()
-    
+
     if deadlocked:
         print("Deadlock detected!")
-        victim = detector.resolve_deadlock(deadlocked)
-        print(f"Deadlock resolved by releasing resource held by process {victim}")
+        detector.resolve_deadlock(deadlocked)
     else:
         print("No deadlock detected")
